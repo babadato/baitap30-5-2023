@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let studentList = [];
+        let student = [];
+        let studentId;
+        let StudentName;
+        let age;
+        let markHtml;
+        let markCss;
+        let markJs;
+        let avgMark;
+        let rank;
+
+        for (let i = 0; i < 5; i++) {
+            do {
+                studentId = prompt('Nhap mssv');
+                if (studentId.length == 5 && studentId.startsWith("S") == true) {
+                    student.push(studentId);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true);
+
+            do {
+                StudentName = prompt('nhap ten sv');
+                if (StudentName.length >= 6 && StudentName.length <= 30) {
+                    student.push(StudentName);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true);
+
+            do {
+                age = prompt('nhap tuoi');
+                if (isNaN(age) && a.length == 2 && 18 <= Number(age) <=30) {
+                    student.push(age);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true);
+
+            do {
+                markHtml = prompt('nhap diem html');
+                if (!isNaN(markHtml) && 0 <= Number(markHtml) <= 10) {
+                    student.push(markHtml);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true);
+                                
+            do {
+                markCss = prompt('nhap diem css');
+                if (!isNaN(markCss) && 0 <= Number(markCss) <= 10) {
+                    student.push(markCss);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true); 
+            
+            do {
+                markJs = prompt('nhap diem js');
+                if (!isNaN(markJs) && 0 <= Number(markJs) <= 10) {
+                    student.push(markJs);
+                    break;
+                } else {
+                    continue;
+                }
+            } while (true);
+
+            avgMark = (Number(markHtml) + Number(markCss) + Number(markJs))/ 3;
+            if (avgMark < 5) {
+                rank = "Yếu";
+            } else if (avgMark < 7) {
+                rank = "Trung bình";
+            } else if (avgMark < 8) {
+                rank = "Khá";
+            } else if (avgMark < 9) {
+                rank = "Giỏi";
+            } else {
+                rank = "Xuất sắc";
+            }
+            
+            student.push(avgMark);
+            student.push(rank);
+            studentList.push(student);
+            student = []
+            }
+                
+    </script>
+
+</body>
+
+</html>
